@@ -5,3 +5,41 @@
 	border-radius: 5px;
 	box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.15);
 }
+
+.book-info{
+	width: 100%;
+}
+
+@media (max-width: 996px){
+	.book-card{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+		margin-top: 20px;
+	}
+	.book-info {
+		max-width: 300px;
+		flex-direction: column;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+		margin-top: 20px;
+	}
+	.text-dark {
+		height: 65px;
+		width: 253px;
+	}
+}
+
+@media (max-width: 810px) {
+	.book-info{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+		margin-top: 20px;
+	}
+	
+}
