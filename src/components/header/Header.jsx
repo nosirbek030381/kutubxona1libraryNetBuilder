@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Header() {
 	return (
 		<>
-			<nav className='navbar navbar-expand-lg navbar-dark bg-primary p-3'>
+			<nav className='navbar navbar-expand-lg  navbar-dark bg-primary p-3'>
 				<div className='container'>
 					<div className='d-flex align-items-center'>
 						<img src='https://pngimg.com/uploads/book/book_PNG51001.png' width={50} />

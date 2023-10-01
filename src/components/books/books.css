@@ -5,3 +5,16 @@
 	border-radius: 5px;
 	box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.15);
 }
+
+.category{
+	font-size: 10px;
+}
+
+
+@media (max-width: 1024px) {
+	.book-item {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 10px;
+	}
+}

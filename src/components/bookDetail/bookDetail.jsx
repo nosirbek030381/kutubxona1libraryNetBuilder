@@ -1,15 +1,20 @@
 import React, { useEffect } from 'react';
 import './bookDetail.css';
 import ImgR from '../../image/about-img.jpg'
+import Header from '../header/Header';
 
 const BookDetails = ({ title, author, description, coverImage, pdfLink, audio }) => {
 
 	return (
+		<div>
+			{/* <div>
+				<Header />
+			</div> */}
 		<div className='book-card container font-monospace'>
 			<h2 className='mb-4'>{title}</h2>
-			<div className='book-info d-flex justify-content-center align-items-center' >
-				<div className='book-cover'>
-					<img src={coverImage} alt={title} className='mx-5' width={120} height={150} />
+			<div className='book-info d-flex justify-content-center align-items-center clr' >
+				<div className='book-cover mb-4'>
+					<img src={coverImage} alt={title} className='mx-5' width={200} height={200} />
 				</div>
 				<div className='card card-header w-75'>
 					<p>Author: {author}</p>
@@ -30,6 +35,8 @@ const BookDetails = ({ title, author, description, coverImage, pdfLink, audio })
 					</a>
 				</div>
 			</div>
+		</div>
+		
 		</div>
 	);
 };

@@ -3,7 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 import BookDetail from '../bookDetail/bookDetail';
 import './section.css';
 
-const URL = 'https://api.kutubxona2.librarynetbuilder.uz/search?';
+const URL = 'https://api.kutubxona1.librarynetbuilder.uz/search?';
+const API_URL1 = 'https://api.kutubxona1.librarynetbuilder.uz'
 
 const Section = () => {
 	const [loading, setLoading] = useState(false);
@@ -12,7 +13,7 @@ const Section = () => {
 
 	const scrollHeight = () => {
 		const booksList = document.getElementById('booksList');
-		if (res) booksList.scrollIntoView({ height: '100vh' });
+		if (res) booksList.scrollIntoView({ behavior: "smooth" });
 	};
 
 	const handleClick = async e => {
@@ -30,6 +31,7 @@ const Section = () => {
 
 		setRes({
 			book: data[0],
+			library: data[1]
 		});
 
 		setLoading(false);
@@ -82,16 +84,17 @@ const Section = () => {
 						<div className='row'>
 							{res.book.map((book, ind) => (
 								
-								<div className='card-info  w-50 d-flex justify-content-center ' key={ind}>
+								<div className='card-info  w-50  ' key={ind}>
 									<div className='card mt-5'>
 										<div className='card-body'>
 										{/* <h6 className='card-subtitle mb-2 text-muted'>{book.author?.name}</h6>
 											<h5 className='card-title'>{book.title}</h5> */}
+										
 											<BookDetail 
 											bookId ={book.id}
 											title={book.title}
 											author={book.author?.name || "Unknown!!"}
-											coverImage={book.image}
+											coverImage={API_URL1 + book.image}
 											description={book.description || "No description"}
 											audio={book.audio && "no audio"}
 											pdfLink={book.pdf}
